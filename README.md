@@ -27,7 +27,7 @@ cd C:\mysql<br/>
 ### **4 - Lancement du serveur de base de données**<br/>
 ```.\mysqld.exe --console```
 
-### **5 - connexion au serveur via le terminal**<br/>
+### **5 - Connexion au serveur via le terminal**<br/>
 A l'initialisation du dossier data un mot de passe à été généré automatiquement pour se connecter au serveur.<br/>
 Allez dans le dossier data et chercher un fichier nommé selon le nom de votre ordinateur, ouvrez-le.<br/>
 Vous pouvez retrouvez ce nom sur Windows dans Informations Systèmes
