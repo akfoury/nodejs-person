@@ -14,7 +14,7 @@ Créer un fichier my.ini à la racine du répertoire mysql
 
 Ecrire le code suivant :<br/>
 ```
-[mysqld]<br/>
+[mysqld]
 basedir=C:/mysql<br/>
 datadir=C:/mysql/data
 ```
