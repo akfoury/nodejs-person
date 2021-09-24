@@ -12,12 +12,12 @@ Placer le dossier mysql dans le répertoire C
 Se rendre dans le dossier mysql<br/>
 Créer un fichier my.ini à la racine du répertoire mysql
 
-Ecrire le code suivant :
+Ecrire le code suivant :<br/>
 [mysqld]<br/>
 basedir=C:/mysql<br/>
 datadir=C:/mysql/data
 
-**3 - Initialisation du dossier data**
+**3 - Initialisation du dossier data**<br/>
 Se rendre dans un terminal et taper les commandes suivantes :<br/>
 cd C:\mysql<br/>
 .\mysqld.exe --defaults-file=C:\mysql\my.ini --initialize
@@ -31,7 +31,7 @@ Allez dans le dossier data et chercher un fichier nommé selon le nom de votre o
 Vous pouvez retrouvez ce nom sur Windows dans Informations Systèmes
 
 Vous devriez trouver la ligne suivante: <br/>
-2021-09-21T10:14:16.954035Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: >X_0p.>r+xbG
+2021-09-21T10:14:16.954035Z 6 [Note] [MY-010454] [Server] A temporary password is generated for root@localhost: **>X_0p.>r+xbG**
 
 Copiez le mot de passe et rendez vous dans un nouveau terminal<br/>
 taper la commande suivante:<br/>
