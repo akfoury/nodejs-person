@@ -1,14 +1,14 @@
 # react-nodejs
 CRUD liste de personnes avec NodeJS
 
-Installation du serveur local MySQL
+**Installation du serveur local MySQL**
 
 1 - Télécharger MySQL Community Server 8.0.26
-https://dev.mysql.com/downloads/mysql/
-Windows (x86, 64-bit), ZIP Archive
+https://dev.mysql.com/downloads/mysql/ <br/>
+Windows (x86, 64-bit), ZIP Archive <br/>
 Placer le dossier mysql dans le répertoire C
 
-2 - Création d'un fichier d'initialisation
+**2 - Création d'un fichier d'initialisation**
 Se rendre dans le dossier mysql
 Créer un fichier my.ini à la racine du répertoire mysql
 
@@ -17,15 +17,15 @@ Ecrire le code suivant :
 basedir=C:/mysql
 datadir=C:/mysql/data
 
-3 - Initialisation du dossier data
+**3 - Initialisation du dossier data**
 Se rendre dans un terminal et taper les commandes suivantes :
 cd C:\mysql
 .\mysqld.exe --defaults-file=C:\mysql\my.ini --initialize
 
-4 - Lancement du serveur de base de données
+**4 - Lancement du serveur de base de données**
 .\mysqld.exe --console
 
-5 - connexion au serveur via le terminal
+**5 - connexion au serveur via le terminal**
 A l'initialisation du dossier data un mot de passe à été généré automatiquement pour se connecter au serveur.
 Allez dans le dossier data et chercher un fichier nommé selon le nom de votre ordinateur, ouvrez-le.
 Vous pouvez retrouvez ce nom sur Windows dans Informations Systèmes
@@ -43,7 +43,7 @@ C'est bon vous êtes connecté au serveur !
 Taper la commande suivante pour ne plus avoir à retaper de mot de passe :
 alter table user 'root'@'localhost' identified by '';
 
-6 - Import du dump de la base de données
+**6 - Import du dump de la base de données**
 mysql -u username -p database_name < person_dump.sql
 
 Commandes usuelles:
