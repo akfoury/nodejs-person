@@ -1,7 +1,7 @@
 # react-nodejs
 CRUD liste de personnes avec NodeJS
 
-## titre**Installation du serveur local MySQL**
+## **Installation du serveur local MySQL**
 
 ### **1 - Télécharger MySQL Community Server 8.0.26**<br/>
 https://dev.mysql.com/downloads/mysql/ <br/>
