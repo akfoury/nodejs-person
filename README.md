@@ -61,6 +61,6 @@ MySQL<br/>
 ## **Lancement du server nodeJS**
  
 Ouvrir un terminal<br/>
-cd C:\Users\Alex\Documents\node-person<br/>
-node server.js
+```cd C:\Users\Alex\Documents\node-person```<br/>
+```node server.js```
 
