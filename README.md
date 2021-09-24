@@ -53,10 +53,10 @@ Taper la commande suivante pour ne plus avoir à retaper de mot de passe :<br/>
 Commandes usuelles:
 
 Terminal<br/>
-```
-.\mysql.exe -u root -p
-.\mysqld.exe --console
-```
+
+```.\mysql.exe -u root -p```
+```.\mysqld.exe --console```
+
 
 MySQL<br/>
 ```
@@ -76,4 +76,4 @@ node server.js
 ## **Astuce**
 Pour pouvoir exécuter les lignes de commandes depuis n'importe quel endroit, placer le dossier bin de mysql dans les variables d'environnements de Windows
 
-C:\mysql\bin
+```C:\mysql\bin```
