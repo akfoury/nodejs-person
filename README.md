@@ -54,7 +54,7 @@ Commandes usuelles:
 
 Terminal<br/>
 
-```.\mysql.exe -u root -p```
+```.\mysql.exe -u root -p```<br/>
 ```.\mysqld.exe --console```
 
 
