@@ -72,3 +72,7 @@ cd C:\Users\Alex\Documents\node-person
 node server.js
 ```
 
+## **Astuce**
+Pour pouvoir exécuter les lignes de commandes depuis n'importe quel endroit, placer le dossier bin de mysql dans les variables d'environnements de Windows
+
+C:\mysql\bin
