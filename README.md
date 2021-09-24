@@ -44,7 +44,7 @@ Taper la commande suivante pour ne plus avoir à retaper de mot de passe :<br/>
 alter table user 'root'@'localhost' identified by '';
 
 **6 - Import du dump de la base de données**<br/>
-mysql -u username -p database_name < person_dump.sql
+mysql -u <username> -p <database_name> < person_dump.sql
 
 Commandes usuelles:
 
