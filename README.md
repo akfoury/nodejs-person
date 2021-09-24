@@ -21,8 +21,10 @@ datadir=C:/mysql/data
 
 ### **3 - Initialisation du dossier data**<br/>
 Se rendre dans un terminal et taper les commandes suivantes :<br/>
+```
 cd C:\mysql<br/>
-```.\mysqld.exe --defaults-file=C:\mysql\my.ini --initialize```
+.\mysqld.exe --defaults-file=C:\mysql\my.ini --initialize
+```
 
 ### **4 - Lancement du serveur de base de données**<br/>
 ```.\mysqld.exe --console```
@@ -51,16 +53,22 @@ Taper la commande suivante pour ne plus avoir à retaper de mot de passe :<br/>
 Commandes usuelles:
 
 Terminal<br/>
-```.\mysql.exe -u root -p```<br/>
-```.\mysqld.exe --console```
+```
+.\mysql.exe -u root -p
+.\mysqld.exe --console
+```
 
 MySQL<br/>
-```use <nom_de_table>;```<br/>
-```select * from <nom_de_table>;```
+```
+use <nom_de_table>;
+select * from <nom_de_table>;
+```
 
 ## **Lancement du server nodeJS**
  
 Ouvrir un terminal<br/>
-```cd C:\Users\Alex\Documents\node-person```<br/>
-```node server.js```
+```
+cd C:\Users\Alex\Documents\node-person
+node server.js
+```
 
