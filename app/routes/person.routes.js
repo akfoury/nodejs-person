@@ -6,6 +6,9 @@ module.exports = app => {
   
     // Récupérer toute les personne
     app.get("/person", person.findAll);
+
+    // Récupérer toute les personne trié selon une colonne
+    app.get("/person/:colName/:direction", person.findAllSortedByColumn);
   
     // Récupérer une personne par son ID
     app.get("/person/:personId", person.findOne);

@@ -21,7 +21,7 @@ Person.create = (newPerson, result) => {
 };
 
 Person.getAll = result => {
-    sql.query('select * from person.t_person', (err, res) => {
+    sql.query('select * from person.t_person order by id desc', (err, res) => {
         if (err) {
             console.log('error : ', err);
             result(err, null);
@@ -32,6 +32,19 @@ Person.getAll = result => {
         result(null, res);
     });
 };
+
+Person.getAllSortedByColumn = (colName, direction, result) => {
+    sql.query(`select * from person.t_person order by ${colName} ${direction}`, (err, res) => {
+        if (err) {
+            console.log('error : ', err);
+            result(err, null);
+            return;
+        }
+
+        console.log('persons : ', res);
+        result(null, res);
+    });
+}
 
 Person.getById = (personId, result) => {
     sql.query(`select * from person.t_person where id = ${personId}`, (err, res) => {
