@@ -20,8 +20,11 @@ Person.create = (newPerson, result) => {
     });
 };
 
-Person.getAll = result => {
-    sql.query('select * from person.t_person order by id desc', (err, res) => {
+Person.getAll = (numPage, numRows, result) => {
+    console.log(numPage);
+    sql.query('select * from person.t_person order by id desc limit ?,?', 
+    [parseInt(numPage) === 1 ? 1 : (parseInt(numPage)-1) * parseInt(numRows), parseInt(numRows)],
+    (err, res) => {
         if (err) {
             console.log('error : ', err);
             result(err, null);

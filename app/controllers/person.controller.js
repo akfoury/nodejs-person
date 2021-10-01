@@ -30,7 +30,7 @@ exports.create = (req, res) => {
 
 // requête GET
 exports.findAll = (req, res) => {
-  Person.getAll((err, data) => {
+  Person.getAll(req.params.numPage, req.params.numRows, (err, data) => {
       if (err)
       res.status(500).send({
           message:

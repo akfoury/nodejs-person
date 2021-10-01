@@ -5,7 +5,7 @@ module.exports = app => {
     app.post("/person", person.create);
   
     // Récupérer toute les personne
-    app.get("/person", person.findAll);
+    app.get("/person/:numPage/:numRows", person.findAll);
   
     // Récupérer une personne par son ID
     app.get("/person/:personId", person.findOne);
