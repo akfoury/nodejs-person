@@ -33,19 +33,6 @@ Person.getAll = result => {
     });
 };
 
-Person.getAllSortedByColumn = (colName, direction, result) => {
-    sql.query(`select * from person.t_person order by ${colName} ${direction}`, (err, res) => {
-        if (err) {
-            console.log('error : ', err);
-            result(err, null);
-            return;
-        }
-
-        console.log('persons : ', res);
-        result(null, res);
-    });
-}
-
 Person.getById = (personId, result) => {
     sql.query(`select * from person.t_person where id = ${personId}`, (err, res) => {
         if (err) {
@@ -100,15 +87,20 @@ Person.remove = (personId, result) => {
   };
   
   Person.removeAll = result => {
-    sql.query("delete from person.t_person", (err, res) => {
+    sql.query("truncate table person.t_person", (err, res) => {
       if (err) {
         console.log("error: ", err);
         result(null, err);
         return;
       }
+
+      sql.query('alter table person.t_person auto_increment = 0', (err, result) => {
+        if (err) throw err;
+        console.log("Result: " + result);
+      });
   
       console.log(`deleted ${res.affectedRows} persons`);
-      result(null, res);
+      result(res, null);
     });
   };
   

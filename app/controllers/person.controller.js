@@ -40,17 +40,6 @@ exports.findAll = (req, res) => {
   });
 };
 
-exports.findAllSortedByColumn = (req, res) => {
-  Person.getAllSortedByColumn(req.params.colName, req.params.direction, (err, data) => {
-    if (err)
-    res.status(500).send({
-        message:
-        err.message || "Some error occurred while retrieving persons."
-    });
-    else res.send(data);
-  });
-}
-
 // requête GET
 exports.findOne = (req, res) => {
     Person.getById(req.params.personId, (err, data) => {
@@ -80,6 +69,8 @@ exports.update = (req, res) => {
     req.params.personId,
     new Person(req.body),
     (err, data) => {
+      console.log(err);
+      console.log(data);
       if (err) {
         if (err.kind === "not_found") {
           res.status(404).send({
@@ -98,6 +89,7 @@ exports.update = (req, res) => {
 // requête DELETE
 exports.delete = (req, res) => {
   Person.remove(req.params.personId, (err, data) => {
+    console.log(data);
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({
